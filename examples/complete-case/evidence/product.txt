@@ -1,0 +1,5 @@
+SYNTHETIC PRODUCT RECORD
+Vendor: Example Research Lab
+Product: Example Console
+Version: 1.0.0
+No such product deployment was inspected.

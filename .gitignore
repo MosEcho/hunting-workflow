@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+out/
+dist/
+build/
+.DS_Store
+.env
+*.secret.json
+*.local.json
+.coverage

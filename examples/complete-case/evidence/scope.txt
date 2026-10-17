@@ -1,0 +1,3 @@
+SYNTHETIC SCOPE RECORD
+Self-hosted demonstration: https://console.example.invalid
+No permission for any real target is implied. All evidence in this fixture is fabricated for tests.

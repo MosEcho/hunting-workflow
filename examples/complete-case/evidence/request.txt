@@ -1,0 +1,5 @@
+SYNTHETIC DEMO — no request was sent.
+GET /api/demo/admin-view HTTP/1.1
+Host: console.example.invalid
+X-Demo-Actor: anonymous
+

@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "id": "synthetic-console-001",
+  "synthetic": true,
+  "title": "Example Console 管理视图权限边界演示（合成案例）",
+  "vendor": "Example Research Lab",
+  "product": "Example Console",
+  "product_description": "虚构的 Web 管理控制台，仅用于演示报告数据模型。",
+  "affected_versions": [
+    {
+      "version": "1.0.0",
+      "relation": "=",
+      "evidence_ids": [
+        "EV-VERSION"
+      ]
+    }
+  ],
+  "vulnerability_types": [
+    "authorization boundary demonstration"
+  ],
+  "description": "合成示例展示如何记录匿名身份、预期权限与实际结果的差异；不对应真实漏洞。",
+  "trigger_conditions": "虚构角色 anonymous 访问虚构的管理视图；全部记录由项目生成。",
+  "impact": "虚构场景中的管理视图边界异常；没有真实业务记录、账号或受影响生产实例。",
+  "location": "虚构接口 /api/demo/admin-view；没有可执行的利用载荷。",
+  "fingerprint": "合成检索示例：product=\"Example Console\"；未查询任何测绘引擎。",
+  "evidence": [
+    {
+      "id": "EV-REQ",
+      "path": "evidence/request.txt",
+      "kind": "request",
+      "sha256": "c389f57efbf1458a2cb5e82c216293549cce8151d404828df0585f74ea248986"
+    },
+    {
+      "id": "EV-RES",
+      "path": "evidence/response.txt",
+      "kind": "response",
+      "sha256": "1f12d35977b97322a8e0a9125d53aca62f63e7a910eb7b5a74529391ffd6c0b9"
+    },
+    {
+      "id": "EV-CTRL",
+      "path": "evidence/control.txt",
+      "kind": "control_response",
+      "sha256": "ac92b0b0ab77aed6390823a6f02e17736357dfa395a0ee0c10e3d05d75c163d5"
+    },
+    {
+      "id": "EV-VERSION",
+      "path": "evidence/product.txt",
+      "kind": "product_version",
+      "sha256": "eb829cfe28353f6b0e4aade5b5f57fd161c189e21308d3468c7a62d06569b26a"
+    },
+    {
+      "id": "EV-SCOPE",
+      "path": "evidence/scope.txt",
+      "kind": "authorization",
+      "sha256": "51949e4a25957cb059df77d1eaab5954e855cb42cc22771714448f59e0518817"
+    },
+    {
+      "id": "EV-SEARCH",
+      "path": "evidence/search.txt",
+      "kind": "search_record",
+      "sha256": "090e14dc3d9fe447febd0c266e8d1ae7dc922e4aa13edc7132c998154fd85c55"
+    },
+    {
+      "id": "EV-SHOT",
+      "path": "evidence/screenshot.svg",
+      "kind": "screenshot",
+      "sha256": "ca204a21f90606488d00e029b4ba27561bf50479a8efe4717dd793cc0724ffa0"
+    }
+  ],
+  "scope": {
+    "basis": "self_hosted_lab",
+    "evidence_ids": [
+      "EV-SCOPE"
+    ],
+    "authorized_targets": [
+      "https://console.example.invalid"
+    ],
+    "targets": [
+      "https://console.example.invalid"
+    ]
+  },
+  "verification": {
+    "status": "verified",
+    "human_reviewed": true,
+    "review_note": "仅表示示例夹具模拟了人工复核记录，不是一次真实复测。",
+    "steps": [
+      "阅读虚构的预期权限策略。",
+      "比较合成的匿名请求、响应与预期策略。"
+    ],
+    "evidence_ids": [
+      "EV-REQ",
+      "EV-RES",
+      "EV-CTRL",
+      "EV-SHOT"
+    ],
+    "expected": "合成策略要求拒绝匿名访问管理视图。",
+    "actual": "合成响应包含 demo-admin-summary 标记，不包含真实业务数据。",
+    "cleanup": "未运行服务或发送请求，无真实变更需要清理。"
+  },
+  "claims": [
+    {
+      "id": "CL-1",
+      "text": "模拟匿名响应与虚构的预期策略不一致。",
+      "status": "verified",
+      "evidence_ids": [
+        "EV-REQ",
+        "EV-RES",
+        "EV-CTRL"
+      ]
+    }
+  ],
+  "affected_instances": [
+    {
+      "target": "https://console.example.invalid",
+      "version": "1.0.0",
+      "evidence_ids": [
+        "EV-REQ",
+        "EV-RES",
+        "EV-VERSION"
+      ]
+    }
+  ],
+  "originality": {
+    "status": "reviewed_no_match",
+    "review_note": "合成检索记录，不证明任何真实缺陷的原创性。",
+    "searches": [
+      {
+        "source": "Example Advisory Index (fictional)",
+        "url": "https://advisories.example.invalid",
+        "query": "Example Console demo admin-view",
+        "checked_at": "2026-10-17",
+        "result": "虚构索引中无匹配；实际未执行联网检索。"
+      }
+    ]
+  },
+  "severity": {
+    "level": "medium",
+    "rationale": "示例自评用于演示填写依据；不对应真实评级，也不由工具推断等级。"
+  },
+  "remediation": {
+    "temporary": "虚构场景：限制演示入口。",
+    "permanent": "虚构场景：在服务端执行明确的权限校验。",
+    "verification": "虚构场景：比较匿名与获准角色的预期结果。"
+  },
+  "contacts": {
+    "reporter": {
+      "name": "Example Reporter",
+      "email": "reporter@example.invalid",
+      "phone": "DEMO-NOT-A-REAL-PHONE"
+    },
+    "supporter": {
+      "name": "Example Supporter",
+      "email": "supporter@example.invalid",
+      "phone": "DEMO-NOT-A-REAL-PHONE"
+    }
+  },
+  "limitations": [
+    "全部证据、截图、身份、检索和复核记录均为合成夹具。",
+    "不证明产品缺陷、真实实例、平台受理或证书条件。"
+  ],
+  "platform_review": {
+    "field_mapping_confirmed": false,
+    "reviewed_at": "",
+    "note": "需要用户对照当前平台页面确认；本示例禁止真实报送。"
+  }
+}

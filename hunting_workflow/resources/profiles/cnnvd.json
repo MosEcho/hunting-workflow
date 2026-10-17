@@ -1,0 +1,32 @@
+{
+  "id": "cnnvd-draft-1",
+  "purpose": "Local preparation profile; not an official platform specification",
+  "reviewed_on": "2026-10-17",
+  "live_field_verification": null,
+  "verification_note": "Official SPA entrypoints were reachable but returned no parseable form text. Current requirements require human confirmation.",
+  "case_count_threshold": null,
+  "certificate_guarantee": false,
+  "automatic_submission": false,
+  "draft_length_guidelines": {
+    "description": 200,
+    "fingerprint": 255,
+    "trigger_conditions": 255,
+    "impact": 500,
+    "location": 255
+  },
+  "guideline_authority": "Local drafting guidance; not enforced as official platform rules",
+  "sources": [
+    {
+      "title": "CNNVD official documentation entry",
+      "url": "https://www.cnnvd.org.cn/#/frontend/specDocDownload"
+    },
+    {
+      "title": "CNNVD official FAQ entry",
+      "url": "https://www.cnnvd.org.cn/#/frontend/answer"
+    },
+    {
+      "title": "CNNVD reporting entry",
+      "url": "https://www.cnnvd.org.cn/#/backend/generalSend"
+    }
+  ]
+}

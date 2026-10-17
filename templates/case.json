@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "id": "replace-with-your-case-id",
+  "synthetic": false,
+  "title": "",
+  "vendor": "",
+  "product": "",
+  "affected_versions": [],
+  "evidence": [],
+  "claims": [],
+  "affected_instances": [],
+  "verification": {
+    "status": "unverified",
+    "human_reviewed": false,
+    "steps": [],
+    "evidence_ids": []
+  },
+  "originality": {
+    "status": "not_checked",
+    "searches": []
+  },
+  "severity": {
+    "level": "unrated",
+    "rationale": ""
+  },
+  "limitations": [],
+  "platform_review": {
+    "field_mapping_confirmed": false,
+    "reviewed_at": "",
+    "note": ""
+  }
+}

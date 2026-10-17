@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hunting-workflow"
+version = "0.1.0"
+description = "Offline asset normalization and evidence-driven vulnerability reporting workflows"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "MosEcho"}]
+dependencies = []
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Topic :: Security",
+  "Environment :: Console",
+]
+
+[project.scripts]
+hunting-workflow = "hunting_workflow.cli:main"
+
+[project.urls]
+Repository = "https://github.com/MosEcho/hunting-workflow"
+Issues = "https://github.com/MosEcho/hunting-workflow/issues"
+
+[tool.setuptools.packages.find]
+include = ["hunting_workflow*"]
+
+[tool.setuptools.package-data]
+hunting_workflow = ["resources/schemas/*.json", "resources/profiles/*.json"]

@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0",
+  "id": "synthetic-missing-001",
+  "synthetic": true,
+  "title": "缺少证据与版本的合成候选",
+  "product": "Example Console",
+  "verification": {
+    "status": "unverified",
+    "human_reviewed": false,
+    "steps": [
+      "观察一个合成线索。"
+    ]
+  },
+  "originality": {
+    "status": "not_checked",
+    "searches": []
+  },
+  "severity": {
+    "level": "unrated",
+    "rationale": ""
+  },
+  "limitations": [
+    "此案例故意缺少材料，用于演示下一步。"
+  ]
+}

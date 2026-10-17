@@ -1,0 +1,7 @@
+url,host,protocol,port,vendor,product,organization,source
+https://Console.Example.Invalid/admin,,https,443,Example Research Lab,Example Console,Example Org A,synthetic inventory
+https://console.example.invalid:443/login,,https,443,Example Research Lab,Example Console,Example Org A,synthetic inventory duplicate
+,http://192.0.2.10:8080,http,8080,Example Research Lab,Example Console,,synthetic inventory
+,http://192.0.2.10:8080/path,http,8080,Example Research Lab,Example Console,,synthetic duplicate
+,http://198.51.100.20,http,80,Example Research Lab,Example Console,Example Org B,synthetic inventory
+,https://[2001:db8::1]:8443,https,8443,Example Research Lab,Example Console,,synthetic IPv6

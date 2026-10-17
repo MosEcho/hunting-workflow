@@ -1,0 +1,2 @@
+# Preserve the deliberate HTTP header/body separator in this synthetic fixture.
+examples/complete-case/evidence/request.txt whitespace=-blank-at-eof

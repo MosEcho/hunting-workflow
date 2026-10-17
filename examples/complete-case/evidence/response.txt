@@ -1,0 +1,5 @@
+SYNTHETIC DEMO — no response was collected from a real service.
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{"synthetic":true,"view":"demo-admin-summary","records":0}

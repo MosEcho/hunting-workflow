@@ -1,0 +1,4 @@
+SYNTHETIC SEARCH RECORD
+Example Advisory Index
+Query: Example Console demo admin-view
+Result: no match in a fictional index. This is not a real originality check.
