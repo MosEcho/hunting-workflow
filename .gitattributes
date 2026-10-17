@@ -1,2 +1,5 @@
+* text=auto eol=lf
+# Evidence digests describe bytes, so checkout must not translate line endings.
+examples/complete-case/evidence/* -text
 # Preserve the deliberate HTTP header/body separator in this synthetic fixture.
 examples/complete-case/evidence/request.txt whitespace=-blank-at-eof
