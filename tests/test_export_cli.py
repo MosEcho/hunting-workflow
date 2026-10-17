@@ -1,6 +1,7 @@
 import contextlib
 import io
 import json
+import os
 import shutil
 import socket
 import subprocess
@@ -88,8 +89,15 @@ class ExportTests(CaseFixture):
 
     def test_cloned_repo_runs_outside_current_directory(self):
         result = subprocess.run([sys.executable, "-B", str(ROOT / "run.py"), "demo", "--output", str(self.base / "outside")],
-                                cwd=self.base, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+                                cwd=self.base, stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding="utf-8")
         self.assertEqual(result.returncode, 0, result.stderr)
+
+    def test_legacy_console_encoding_still_produces_utf8(self):
+        env = dict(os.environ, PYTHONIOENCODING="cp1252", PYTHONUTF8="0")
+        result = subprocess.run([sys.executable, "-B", str(ROOT / "run.py"), "demo", "--output", str(self.base / "legacy")],
+                                cwd=self.base, env=env, stdout=subprocess.PIPE, stderr=subprocess.PIPE, encoding="utf-8")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("打开 / Open", result.stdout)
 
     def test_cli_input_error_is_actionable(self):
         with contextlib.redirect_stderr(io.StringIO()) as stream:

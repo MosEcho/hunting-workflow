@@ -72,6 +72,11 @@ def parser():
 
 
 def main(argv=None):
+    # Redirected Windows terminals may default to a legacy code page. The CLI's
+    # machine-readable JSON and bilingual messages use UTF-8 on every platform.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="backslashreplace")
     args = parser().parse_args(argv)
     try:
         if args.command == "demo":

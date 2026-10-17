@@ -8,3 +8,4 @@
 - Markdown/printable HTML reports, draft fields, checklists and self-contained ZIP exports.
 - Complete and intentionally incomplete synthetic fixtures, including an original demonstration SVG.
 - Offline tests, cross-platform CI, documentation validation and publication allowlist checks.
+- UTF-8 CLI output on legacy Windows code pages and byte-preserving evidence checkouts.
